@@ -84,7 +84,7 @@ collections:
               - label: "Rasmlar (URLlar)"
                 name: "images"
                 widget: "list"
-                field: { label: "URL", widget: "string" }
+                field: { label: "URL", name: "url", widget: "string" }
               - label: "Gid"
                 name: "guide"
                 widget: "object"
