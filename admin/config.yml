@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Lokal/test uchun (deploydan oldin):
+# local_backend: true  # va alohida terminalda: npx decap-server
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://YOUR-DOMAIN.example
+logo_url: /images/hero-top.jpg
+
+collections:
+  - name: "settings"
+    label: "Sozlamalar"
+    files:
+      - name: "site"
+        label: "Sayt sozlamalari"
+        file: "content/site.json"
+        fields:
+          - { label: "Telegram", name: "telegram_handle", widget: "string", default: "nizomivch" }
+          - { label: "WhatsApp (998...)", name: "whatsapp_number", widget: "string", default: "998000000000" }
+          - { label: "Telefon", name: "phone_number", widget: "string", default: "+998000000000" }
+          - { label: "Booking Form URL (Tally/Google)", name: "booking_form_url", widget: "string", required: false }
+          - { label: "Telegram bot URL (ixtiyoriy)", name: "telegram_bot_url", widget: "string", required: false }
+          - { label: "Payment link (Stripe/Payme/Click)", name: "payment_link", widget: "string", required: false }
+          - { label: "Review endpoint (POST JSON)", name: "review_endpoint", widget: "string", required: false }
+          - label: "Tajribalar"
+            name: "experiences"
+            widget: "list"
+            summary: "{{fields.id}} - {{fields.region}}"
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Hudud (key)", name: "region", widget: "string" }
+              - { label: "Kategoriya", name: "category", widget: "select", options: ["history","food","nature","craft"] }
+              - { label: "Narx USD", name: "priceUSD", widget: "number" }
+              - { label: "Mavjudlik", name: "availability", widget: "select", options: ["daily","weekends","request"] }
+              - { label: "Reyting", name: "rating", widget: "number", value_type: "float" }
+              - { label: "Map query", name: "mapQuery", widget: "string" }
+              - { label: "Rasmlar (URLlar)", name: "images", widget: "list", field: {label: "URL", name: "url", widget: "string"} }
+              - { label: "Nomi (UZ)", name: "title_uz", widget: "string" }
+              - { label: "Nomi (RU)", name: "title_ru", widget: "string" }
+              - { label: "Nomi (EN)", name: "title_en", widget: "string" }
+              - { label: "Tavsif (UZ)", name: "desc_uz", widget: "text" }
+              - { label: "Tavsif (RU)", name: "desc_ru", widget: "text" }
+              - { label: "Tavsif (EN)", name: "desc_en", widget: "text" }
+              - { label: "Davomiylik (UZ)", name: "duration_uz", widget: "string" }
+              - { label: "Davomiylik (RU)", name: "duration_ru", widget: "string" }
+              - { label: "Davomiylik (EN)", name: "duration_en", widget: "string" }
+              - { label: "Uchrashuv (UZ)", name: "meeting_uz", widget: "string" }
+              - { label: "Uchrashuv (RU)", name: "meeting_ru", widget: "string" }
+              - { label: "Uchrashuv (EN)", name: "meeting_en", widget: "string" }
+              - { label: "Gid nomi", name: "guide_name", widget: "string" }
+              - { label: "Gid tillari", name: "guide_langs", widget: "string" }
+          - label: "Mashhur joylar"
+            name: "famousPlaces"
+            widget: "list"
+            fields:
+              - { label: "Hudud (key)", name: "region", widget: "string" }
+              - { label: "Rasm URL", name: "image", widget: "string" }
+              - { label: "Map query", name: "mapQuery", widget: "string" }
+              - { label: "Nomi UZ", name: "name_uz", widget: "string" }
+              - { label: "Nomi RU", name: "name_ru", widget: "string" }
+              - { label: "Nomi EN", name: "name_en", widget: "string" }
+              - { label: "Tavsif UZ", name: "desc_uz", widget: "string" }
+              - { label: "Tavsif RU", name: "desc_ru", widget: "string" }
+              - { label: "Tavsif EN", name: "desc_en", widget: "string" }

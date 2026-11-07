@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3D8FG1BKZ3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3D8FG1BKZ3');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UzExperience — O'zbekiston bo'ylab sayohat tajribalari</title>
+  <meta name="description" content="UzExperience: O'zbekistonning 12 viloyati bo'ylab tarix, taom, tabiat va hunarmandchilik tajribalari. Rasm, lokatsiya, gid va qulay bron (Telegram/WhatsApp)." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="canonical" href="https://YOUR-DOMAIN.example/" />
+  <!-- Open Graph / ulashish -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uz_UZ" />
+  <meta property="og:title" content="UzExperience — O'zbekiston bo'ylab sayohat tajribalari" />
+  <meta property="og:description" content="12 viloyat bo'ylab mashhur joylar va tajribalar: rasm, lokatsiya, gid va qulay bron." />
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/" />
+  <meta property="og:image" content="https://YOUR-DOMAIN.example/images/hero-top.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UzExperience — O'zbekiston bo'ylab sayohat tajribalari" />
+  <meta name="twitter:description" content="12 viloyat bo'ylab mashhur joylar va tajribalar: rasm, lokatsiya, gid va qulay bron." />
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.example/images/hero-top.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="UzExperience">
+        <i class="fa-solid fa-compass"></i>
+        <span>UzExperience</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#catalog" data-i18n="nav_catalog">Katalog</a>
+        <a href="#places" data-i18n="nav_places">Mashhur joylar</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#how" data-i18n="nav_how">Qanday ishlaydi</a>
+        <a href="#contact" data-i18n="nav_contact">Aloqa</a>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">O‘zbekiston bo‘ylab mahalliy tajribalar</p>
+          <h1 data-i18n="hero_title">Sayohatingizni unutilmas qiling</h1>
+          <p class="lead" data-i18n="hero_subtitle">Tarix, taom, tabiat va hunarmandchilik bo‘yicha tajribalarni toping va Telegram orqali bron qiling.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#catalog" data-i18n="hero_cta">Tajribalarni ko‘rish</a>
+            <a class="btn ghost" href="#places" data-i18n="hero_secondary">Mashhur joylar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="catalog_title">Tajriba katalogi</h2>
+          <p data-i18n="catalog_subtitle">Hudud, kategoriya va qidiruv bo‘yicha toping.</p>
+        </div>
+
+        <div id="regionSpotlight" class="region-spotlight hidden" aria-live="polite"></div>
+
+        <div class="filters" aria-label="Filters">
+          <label class="field field-wide">
+            <span data-i18n="filter_search">Qidiruv</span>
+            <input type="search" id="searchInput" placeholder="Masalan: plov, Registon..." data-i18n-placeholder="filter_search_ph" />
+          </label>
+          <label class="field">
+            <span data-i18n="filter_region">Hudud</span>
+            <select id="cityFilter">
+              <option value="all" data-i18n="filter_all">Barchasi</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="filter_category">Kategoriya</span>
+            <select id="categoryFilter">
+              <option value="all" data-i18n="filter_all">Barchasi</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="filter_sort">Saralash</span>
+            <select id="sortSelect">
+              <option value="default" data-i18n="sort_default">Standart</option>
+              <option value="price_asc" data-i18n="sort_price_asc">Narx: arzon → qimmat</option>
+              <option value="price_desc" data-i18n="sort_price_desc">Narx: qimmat → arzon</option>
+              <option value="duration" data-i18n="sort_duration">Davomiylik</option>
+              <option value="name" data-i18n="sort_name">Nom</option>
+            </select>
+          </label>
+          <label class="field field-currency">
+            <span data-i18n="filter_currency">Valyuta</span>
+            <select id="currencyToggle">
+              <option value="USD">USD</option>
+              <option value="UZS">UZS</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filter-bar">
+          <div id="activeChips" class="chips"></div>
+          <div class="filter-actions">
+            <button class="chip-btn" id="toggleFavorites" type="button"><i class="fa-regular fa-heart"></i> <span data-i18n="favorites">Sevimlilar</span></button>
+            <button class="chip-btn" id="toggleRecent" type="button"><i class="fa-regular fa-clock"></i> <span data-i18n="recent">Yaqinda ko‘rilganlar</span></button>
+            <button class="chip-btn danger" id="clearFilters" type="button"><i class="fa-solid fa-rotate-left"></i> <span data-i18n="clear">Tozalash</span></button>
+          </div>
+        </div>
+
+        <div id="resultsInfo" class="results-info"></div>
+        <div id="catalogGrid" class="grid" aria-live="polite"></div>
+        <p id="emptyState" class="empty hidden" data-i18n="empty_state">Mos tajriba topilmadi. Filtrlarni o‘zgartirib ko‘ring.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="places">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="places_title">12 viloyatning mashhur joylari</h2>
+          <p data-i18n="places_subtitle">Har bir hududdan mashhur maskanlar — rasm va lokatsiya bilan.</p>
+        </div>
+        <div id="placesGrid" class="places-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="faq_title">Tez savollar (FAQ)</h2>
+          <p data-i18n="faq_subtitle">Bron, to‘lov va uchrashuv bo‘yicha umumiy ma’lumot.</p>
+        </div>
+        <div id="faqList" class="faq-list"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="how">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="how_title">Qanday ishlaydi</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><span>1</span><p data-i18n="how_1">Hudud va tajribani tanlang, rasm va tafsilotlarni ko‘ring.</p></div>
+          <div class="step"><span>2</span><p data-i18n="how_2">Bron formasini to‘ldiring va Telegram/WhatsApp orqali yuboring.</p></div>
+          <div class="step"><span>3</span><p data-i18n="how_3">Tasdiqlash va uchrashuv tafsilotlarini oling (MVP: qo‘lda).</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <h2 data-i18n="contact_title">Aloqa va bron</h2>
+          <p data-i18n="contact_text">Savol yoki bron uchun qulay usulda bog‘laning (MVP).</p>
+        </div>
+        <div class="contact-actions">
+          <a id="globalTelegram" class="btn primary" href="https://t.me/nizomivch" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i> <span data-i18n="contact_btn">Telegram</span></a>
+          <a id="globalWhatsapp" class="btn ghost" href="https://wa.me/998000000000" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="whatsapp">WhatsApp</span></a>
+          <a id="globalPhone" class="btn ghost" href="tel:+998000000000"><i class="fa-solid fa-phone"></i> <span data-i18n="phone">Telefon</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>UzExperience MVP</span>
+      <span data-i18n="footer_note">O‘zbekiston turizm tajribalari — demo versiya</span>
+    </div>
+  </footer>
+
+  <div class="modal hidden" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="back-to-top hidden" aria-label="Yuqoriga"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="js/app.js"></script>
+</body>
+</html>
