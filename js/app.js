@@ -142,7 +142,7 @@ const availabilityLabels = {
   request: { uz: "So‘rov bo‘yicha", ru: 'По запросу', en: 'On request' }
 };
 
-const famousPlaces = [
+let famousPlaces = [
   { region: 'andijan', name: { uz: 'Bobur bog‘i va merosi', ru: 'Парк Бабура', en: 'Babur Park & Heritage' }, desc: { uz: "Andijonning ramziy maskani.", ru: 'Знаковая локация Андижана.', en: 'An iconic location in Andijan.' }, image: 'https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=900&q=80&auto=format&fit=crop', mapQuery: 'Babur Memorial Park Andijan' },
   { region: 'bukhara', name: { uz: 'Poi Kalon majmuasi', ru: 'Пои-Калян', en: 'Poi Kalyan Complex' }, desc: { uz: 'Buxoroning tarixiy yuragi.', ru: 'Историческое сердце Бухары.', en: 'The historic heart of Bukhara.' }, image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=900&q=80&auto=format&fit=crop', mapQuery: 'Poi Kalyan Bukhara' },
   { region: 'fergana', name: { uz: "Marg'ilon ipak markazi", ru: 'Шёлковый центр Маргилана', en: 'Margilan Silk Center' }, desc: { uz: "Atlas va ipakchilik an'analari.", ru: 'Традиции атласа и шёлка.', en: 'Atlas and silk traditions.' }, image: 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=900&q=80&auto=format&fit=crop', mapQuery: 'Yodgorlik Silk Factory Margilan' },
@@ -157,7 +157,7 @@ const famousPlaces = [
   { region: 'tashkent_region', name: { uz: 'Chorvoq va Chimgan', ru: 'Чарвак и Чимган', en: 'Charvak & Chimgan' }, desc: { uz: 'Tog‘ va suv manzaralari.', ru: 'Горы и озеро.', en: 'Mountains and lake.' }, image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80&auto=format&fit=crop', mapQuery: 'Charvak Reservoir' }
 ];
 
-const experiences = [
+let experiences = [
   { id: 1, region: 'andijan', category: 'food', priceUSD: 18, durationHours: 1.5, duration: { uz: '1.5 soat', ru: '1,5 часа', en: '1.5 hours' }, availability: 'request', rating: 4.8, reviews: [{ n: 'Dilshod', t: { uz: 'Juda mazali va qiziqarli sayohat.', ru: 'Очень вкусно и интересно.', en: 'Very tasty and interesting tour.' } }], meeting: { uz: 'Andijon markazi', ru: 'Центр Андижана', en: 'Andijan center' }, mapQuery: 'Andijan Uzbekistan', images: ['https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80&auto=format&fit=crop','https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&q=80&auto=format&fit=crop'], guide: { name: 'Otabek A.', langs: 'UZ, RU', exp: { uz: '4 yil', ru: '4 года', en: '4 years' }, spec: { uz: 'Mahalliy taomlar', ru: 'Местная кухня', en: 'Local food' }, bio: { uz: 'Andijon taomlari bo‘yicha gid.', ru: 'Гид по кухне Андижана.', en: 'Guide to Andijan cuisine.' } }, title: { uz: 'Andijon mahalliy taomlar tanishuvi', ru: 'Знакомство с кухней Андижана', en: 'Andijan Local Food Intro' }, desc: { uz: "Hududga xos taomlar va tatib ko‘rish nuqtalari bo‘yicha gastrosayohat.", ru: 'Гастротур по региональным блюдам.', en: 'A food walk with regional dishes.' }, includes: { uz: 'Marshrut (taomlar alohida)', ru: 'Маршрут (еда отдельно)', en: 'Route (food separate)' } },
   { id: 2, region: 'andijan', category: 'history', priceUSD: 20, durationHours: 2, duration: { uz: '2 soat', ru: '2 часа', en: '2 hours' }, availability: 'daily', rating: 4.9, reviews: [{ n: 'Azamat', t: { uz: 'Bobur haqida ko‘p narsa bildim.', ru: 'Узнал много о Бабуре.', en: 'Learned a lot about Babur.' } }], meeting: { uz: 'Bobur bog‘i', ru: 'Парк Бабура', en: 'Babur Park' }, mapQuery: 'Babur Memorial Park Andijan', images: ['https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=900&q=80&auto=format&fit=crop','https://images.unsplash.com/photo-1564507592333-c60657eea523?w=900&q=80&auto=format&fit=crop'], guide: { name: 'Mohira A.', langs: 'UZ, RU, EN', exp: { uz: '6 yil', ru: '6 лет', en: '6 years' }, spec: { uz: 'Tarix, meros', ru: 'История, наследие', en: 'History, heritage' }, bio: { uz: 'Andijon tarixi va Bobur merosi bo‘yicha gid.', ru: 'Гид по истории Андижана.', en: 'Guide to Andijan history.' } }, title: { uz: "Andijon tarixi va Bobur izlari", ru: 'История Андижана и следы Бабура', en: 'Andijan History & Babur Trail' }, desc: { uz: "Andijonning muhim maskanlari va tarixiy hikoyalari bilan tanishuv.", ru: 'Знакомство с важными местами Андижана.', en: 'An introduction to key sites of Andijan.' }, includes: { uz: 'Gid va marshrut', ru: 'Гид и маршрут', en: 'Guide and route' } },
   { id: 3, region: 'bukhara', category: 'history', priceUSD: 30, durationHours: 2.5, duration: { uz: '2.5 soat', ru: '2,5 часа', en: '2.5 hours' }, availability: 'daily', rating: 4.9, reviews: [{ n: 'Maria', t: { uz: 'Ajoyib gid va yo‘nalish.', ru: 'Отличный гид и маршрут.', en: 'Excellent guide and route.' } }], meeting: { uz: 'Labi Hovuz', ru: 'Ляби-Хауз', en: 'Lyabi-Hauz' }, mapQuery: 'Lyabi Hauz Bukhara', images: ['https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=900&q=80&auto=format&fit=crop','https://images.unsplash.com/photo-1548013146-72479768bada?w=900&q=80&auto=format&fit=crop'], guide: { name: 'Shokhrukh B.', langs: 'UZ, RU, EN', exp: { uz: '7 yil', ru: '7 лет', en: '7 years' }, spec: { uz: 'Eski shahar', ru: 'Старый город', en: 'Old city' }, bio: { uz: 'Buxoro eski shahri bo‘yicha gid.', ru: 'Гид по старой Бухаре.', en: 'Guide to Old Bukhara.' } }, title: { uz: 'Buxoro eski shahar yurishi', ru: 'Прогулка по старой Бухаре', en: 'Old Bukhara Walking Tour' }, desc: { uz: "Ko‘hna ko‘chalar, madrasalar va savdo gumbazlari haqida hikoyalar.", ru: 'Истории о старинных улочках и медресе.', en: 'Stories about ancient streets and madrasas.' }, includes: { uz: 'Gid xizmati', ru: 'Услуги гида', en: 'Guide service' } },
@@ -175,7 +175,7 @@ const experiences = [
   { id: 15, region: 'karakalpakstan', category: 'history', priceUSD: 50, durationHours: 8, duration: { uz: '1 kun (demo)', ru: '1 день (демо)', en: '1 day (demo)' }, availability: 'request', rating: 4.7, reviews: [{ n: 'Nodir', t: { uz: 'Madaniy jihatdan boy.', ru: 'Культурно насыщенно.', en: 'Culturally rich.' } }], meeting: { uz: 'Nukus', ru: 'Нукус', en: 'Nukus' }, mapQuery: 'Savitsky Museum Nukus', images: ['https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&q=80&auto=format&fit=crop'], guide: { name: 'Timur N.', langs: 'UZ, RU', exp: { uz: '4 yil', ru: '4 года', en: '4 years' }, spec: { uz: 'Madaniy meros', ru: 'Культурное наследие', en: 'Cultural heritage' }, bio: { uz: "Qoraqalpog'iston madaniy yo‘nalishlari bo‘yicha koordinator.", ru: 'Координатор культурных маршрутов.', en: 'Cultural routes coordinator.' } }, title: { uz: "Nukus madaniy merosi (demo)", ru: 'Культурное наследие Нукуса', en: 'Nukus Cultural Heritage (demo)' }, desc: { uz: "Hudud madaniyati va muhim maskanlar bo‘yicha tanishtiruv (MVP).", ru: 'Ознакомление с культурой региона (MVP).', en: 'Intro to regional culture and key sites (MVP).' }, includes: { uz: 'Maslahat va reja', ru: 'Консультация и план', en: 'Advice and plan' } }
 ];
 
-const faqs = [
+let faqs = [
   { q: { uz: 'Qanday bron qilaman?', ru: 'Как забронировать?', en: 'How do I book?' }, a: { uz: 'Tajribani tanlang, bron formasini to‘ldiring va Telegram yoki WhatsApp orqali yuboring (MVP: qo‘lda tasdiqlanadi).', ru: 'Выберите впечатление, заполните форму и отправьте в Telegram или WhatsApp (MVP: подтверждение вручную).', en: 'Choose an experience, fill the form, and send via Telegram or WhatsApp (MVP: manual confirmation).' } },
   { q: { uz: "To‘lov qanday bo‘ladi?", ru: 'Как происходит оплата?', en: 'How is payment handled?' }, a: { uz: "MVP bosqichida to‘lov va shartlar bron tasdiqlanganda alohida kelishiladi. Onlayn to‘lov keyingi bosqichda qo‘shilishi mumkin.", ru: 'На этапе MVP оплата и условия согласуются при подтверждении. Онлайн-оплата может быть добавлена позже.', en: 'In the MVP stage, payment and terms are arranged upon confirmation. Online payment can be added later.' } },
   { q: { uz: 'Bekor qilish mumkinmi?', ru: 'Можно ли отменить?', en: 'Can I cancel?' }, a: { uz: "Bekor qilish shartlari tajriba va gid bilan kelishiladi. Iltimos, imkon qadar oldinroq xabar bering.", ru: 'Условия отмены согласуются с гидом. Пожалуйста, сообщайте заранее.', en: 'Cancellation terms are agreed with the guide. Please notify as early as possible.' } },
@@ -204,6 +204,7 @@ function tgUrl(text) { return `https://t.me/${TELEGRAM_HANDLE}${text ? `?text=${
 function waUrl(text) { return `https://wa.me/${WHATSAPP_NUMBER}${text ? `?text=${encodeURIComponent(text)}` : ''}`; }
 function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function imgTag(src, alt) { return `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"600\" height=\"360\"><rect width=\"100%\" height=\"100%\" fill=\"#e2e8f0\"/><text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"#64748b\" font-family=\"Arial\" font-size=\"18\">UzExperience</text></svg>`)}';">`; }
+function normImages(arr) { return (Array.isArray(arr) ? arr : []).map(x => typeof x === 'string' ? x : (x && x.url ? x.url : '')).filter(Boolean); }
 
 function updateURL() {
   const p = new URLSearchParams();
@@ -308,7 +309,7 @@ function render() {
   if (!list.length) { grid.innerHTML=''; empty.classList.remove('hidden'); return; }
   empty.classList.add('hidden');
   grid.innerHTML = list.map(exp => {
-    const img = exp.images?.[0]; const fav = favs.includes(exp.id);
+    const imgs = normImages(exp.images); const img = imgs[0]; const fav = favs.includes(exp.id);
     return `<article class="card">
       <div class="card-media ${img?'has-image':''}">${img?imgTag(img,exp.title[currentLang]):''}<span class="card-badge">${regionLabels[exp.region][currentLang]}</span><span class="media-fallback"><i class="fa-solid ${categoryIcons[exp.category]||'fa-location-dot'}"></i></span></div>
       <div class="card-body">
@@ -341,7 +342,7 @@ function renderFaq() {
 function openDetail(id) {
   const exp = experiences.find(e => e.id === id); if (!exp) return;
   addRecent(id);
-  const modal = $('#detailModal'); const imgs = exp.images && exp.images.length ? exp.images : [];
+  const modal = $('#detailModal'); const imgs = normImages(exp.images);
   let gIdx = 0;
   const gallery = imgs.length ? `<div class="gallery" id="gallery">${imgTag(imgs[0],exp.title[currentLang])}<div class="hero-overlay"><span><i class="fa-solid fa-location-dot"></i> ${regionLabels[exp.region][currentLang]}</span></div>${imgs.length>1?`<div class="gallery-nav"><button type="button" data-g="-1"><i class="fa-solid fa-chevron-left"></i></button><button type="button" data-g="1"><i class="fa-solid fa-chevron-right"></i></button></div><div class="gallery-dots">${imgs.map((_,i)=>`<span class="${i===0?'active':''}"></span>`).join('')}</div>`:''}</div>` : '';
   const reviews = (exp.reviews||[]).map(r=>`<div class="review"><strong>${escapeHtml(r.n)} · <span class="rating"><i class="fa-solid fa-star"></i> ${exp.rating}</span></strong><p>${escapeHtml(r.t[currentLang])}</p></div>`).join('');
@@ -435,15 +436,25 @@ function closeModal(){ const modal=$('#detailModal'); modal.classList.add('hidde
 async function loadSiteConfig(){
   try {
     const res = await fetch('content/site.json', {cache:'no-store'});
-    if (!res.ok) return;
-    const c = await res.json();
-    if (c.telegram_handle) TELEGRAM_HANDLE = c.telegram_handle;
-    if (c.whatsapp_number) WHATSAPP_NUMBER = c.whatsapp_number;
-    if (c.phone_number) PHONE_NUMBER = c.phone_number;
-    if (typeof c.booking_form_url === 'string') BOOKING_FORM_URL = c.booking_form_url;
-    if (typeof c.telegram_bot_url === 'string') TELEGRAM_BOT_URL = c.telegram_bot_url;
-    if (typeof c.payment_link === 'string') PAYMENT_LINK = c.payment_link;
-    if (typeof c.review_endpoint === 'string') REVIEW_ENDPOINT = c.review_endpoint;
+    if (res.ok) {
+      const c = await res.json();
+      if (c.telegram_handle) TELEGRAM_HANDLE = c.telegram_handle;
+      if (c.whatsapp_number) WHATSAPP_NUMBER = c.whatsapp_number;
+      if (c.phone_number) PHONE_NUMBER = c.phone_number;
+      if (typeof c.booking_form_url === 'string') BOOKING_FORM_URL = c.booking_form_url;
+      if (typeof c.telegram_bot_url === 'string') TELEGRAM_BOT_URL = c.telegram_bot_url;
+      if (typeof c.payment_link === 'string') PAYMENT_LINK = c.payment_link;
+      if (typeof c.review_endpoint === 'string') REVIEW_ENDPOINT = c.review_endpoint;
+    }
+  } catch {}
+  try {
+    const res = await fetch('content/data.json', {cache:'no-store'});
+    if (res.ok) {
+      const d = await res.json();
+      if (Array.isArray(d.famousPlaces)) famousPlaces = d.famousPlaces;
+      if (Array.isArray(d.experiences)) experiences = d.experiences;
+      if (Array.isArray(d.faqs)) faqs = d.faqs;
+    }
   } catch {}
 }
 async function init() {
