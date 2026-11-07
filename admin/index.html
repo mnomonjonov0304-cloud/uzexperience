@@ -1,20 +1,41 @@
 <!doctype html>
-<html>
+<html lang="uz">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UzExperience Admin (Decap CMS)</title>
+  <title>UzExperience — Admin Panel</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, sans-serif; background:#f3f6fb; }
+    .boot { max-width:720px; margin:10vh auto; padding:0 1rem; }
+    .card { background:#fff; border:1px solid #dfe7f1; border-radius:18px; padding:1.15rem 1.2rem; box-shadow:0 12px 34px rgba(15,23,42,.08); }
+    h1 { margin:.1rem 0 .25rem; font-size:1.3rem; color:#132033; }
+    p { margin:.25rem 0 .75rem; color:#5b6b7f; line-height:1.5; }
+    a { color:#0f766e; font-weight:600; }
+    .links { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem; }
+    .links a { text-decoration:none; border:1px solid #dfe7f1; padding:.5rem .75rem; border-radius:10px; background:#fff; color:#132033; }
+  </style>
 </head>
 <body>
+  <div class="boot" id="boot">
+    <div class="card">
+      <h1>UzExperience Admin</h1>
+      <p>CMS yuklanmoqda. Agar sahifa ochilmasa yoki xato chiqsa, vaqtinchalik sozlamalar panelidan foydalaning.</p>
+      <div class="links">
+        <a href="/admin/settings.html">Oddiy sozlamalar</a>
+        <a href="/">Saytga qaytish</a>
+      </div>
+    </div>
+  </div>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
       });
     }
+    // hide boot once CMS likely mounts
+    setTimeout(function(){ var b=document.getElementById('boot'); if(b && window.CMS) b.style.display='none'; }, 1200);
   </script>
-  <p style="font-family:sans-serif;padding:1rem;color:#555">Agar Decap CMS yuklanmasa yoki sozlanmagan bo‘lsa, vaqtinchalik sozlamalar uchun <a href="/admin/settings.html">oddiy admin</a> dan foydalaning.</p>
 </body>
 </html>
