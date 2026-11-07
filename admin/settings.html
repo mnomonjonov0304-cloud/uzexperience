@@ -1,20 +1,81 @@
 <!doctype html>
-<html>
+<html lang="uz">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UzExperience Admin (Decap CMS)</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <title>UzExperience — Oddiy admin (sozlamalar)</title>
+  <style>
+    :root{--bg:#f7f8fb;--surface:#fff;--text:#172033;--muted:#5f6b7a;--border:#e3e8ef;--primary:#0f766e;}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:760px;margin:0 auto;padding:1.25rem}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1rem;box-shadow:0 6px 20px rgba(23,32,51,.06)}
+    h1{margin:.1rem 0 .25rem;font-size:1.35rem} p{color:var(--muted);margin:.25rem 0 .75rem}
+    .grid{display:grid;gap:.75rem;grid-template-columns:1fr 1fr}
+    label{display:grid;gap:.25rem;font-size:.9rem;color:var(--muted);font-weight:600}
+    input,textarea{width:100%;padding:.65rem .75rem;border:1px solid var(--border);border-radius:10px;font:inherit;color:var(--text)}
+    .full{grid-column:1/-1}
+    .actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.9rem}
+    button,a.btn{border:1px solid var(--border);background:#fff;padding:.6rem .9rem;border-radius:10px;font:inherit;cursor:pointer;text-decoration:none;color:var(--text);font-weight:600}
+    button.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+    pre{background:#0f172a;color:#e2e8f0;padding:.85rem;border-radius:12px;overflow:auto;font-size:.86rem;margin:.75rem 0 0}
+    .note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:.65rem .75rem;color:#92400e;font-size:.9rem;margin-top:.75rem}
+    .ok{color:#047857;font-weight:600;font-size:.9rem}
+    @media (max-width:700px){.grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <div class="wrap">
+    <div class="card">
+      <h1>Oddiy admin — sozlamalar</h1>
+      <p>Bu yerda aloqa va integratsiya havolalarini tahrirlaysiz. Statik saytda avtomatik saqlash uchun server/Netlify kerak, shuning uchun bu sahifa sizga tayyor <code>site.json</code> beradi — uni nusxalab faylga saqlaysiz.</p>
+      <div class="grid">
+        <label>Telegram (nizomivch)<input id="telegram_handle" placeholder="nizomivch" /></label>
+        <label>WhatsApp (998..., + siz)<input id="whatsapp_number" placeholder="998901234567" /></label>
+        <label>Telefon<input id="phone_number" placeholder="+998901234567" /></label>
+        <label>Telegram bot URL (ixtiyoriy)<input id="telegram_bot_url" placeholder="https://t.me/..." /></label>
+        <label class="full">Booking form URL (Tally/Google Forms)<input id="booking_form_url" placeholder="https://tally.so/r/XXXXXX" /></label>
+        <label class="full">Payment link (Stripe/Payme/Click, ixtiyoriy)<input id="payment_link" placeholder="https://..." /></label>
+        <label class="full">Review endpoint, POST JSON (ixtiyoriy)<input id="review_endpoint" placeholder="https://api.example.com/reviews" /></label>
+      </div>
+      <div class="actions">
+        <button class="primary" id="btnMake" type="button">JSON yaratish</button>
+        <button id="btnCopy" type="button">Nusxalash</button>
+        <button id="btnDownload" type="button">site.json yuklab olish</button>
+        <a class="btn" href="../index.html">Saytga qaytish</a>
+      </div>
+      <div id="msg"></div>
+      <pre id="out" class="full" aria-live="polite">{}</pre>
+      <div class="note"><strong>Qanday saqlanadi:</strong> “JSON yaratish” → “Nusxalash” (yoki yuklab olish) → <code>uzexperience/content/site.json</code> faylini ochib, ichidagini shu JSON bilan almashtirib saqlang. So‘ng saytni yangilang. Avtomatik saqlash kerak bo‘lsa — Netlify+Decap (1-variant) sozlaymiz.</div>
+    </div>
+  </div>
   <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
-      });
+    const keys = ['telegram_handle','whatsapp_number','phone_number','booking_form_url','telegram_bot_url','payment_link','review_endpoint'];
+    const $ = (id)=>document.getElementById(id);
+    function build(){ const o={}; keys.forEach(k=>o[k]=($(k).value||'').trim()); return o; }
+    function render(){ $('out').textContent = JSON.stringify(build(), null, 2); }
+    async function load(){
+      try{
+        const res = await fetch('../content/site.json', {cache:'no-store'});
+        if(!res.ok) return;
+        const c = await res.json();
+        keys.forEach(k=>{ if(typeof c[k]==='string') $(k).value=c[k]; });
+      }catch{}
+      render();
     }
+    keys.forEach(k=>$(k).addEventListener('input', render));
+    $('btnMake').addEventListener('click', ()=>{ render(); $('msg').innerHTML='<span class="ok">JSON tayyor.</span>'; });
+    $('btnCopy').addEventListener('click', async ()=>{
+      render();
+      try{ await navigator.clipboard.writeText($('out').textContent); $('msg').innerHTML='<span class="ok">Nusxalandi. Endi content/site.json ga qo‘ying.</span>'; }
+      catch{ $('msg').innerHTML='<span>Avtomatik nusxalash bo‘lmadi — JSONni qo‘lda belgilab nusxalang.</span>'; }
+    });
+    $('btnDownload').addEventListener('click', ()=>{
+      render();
+      const blob = new Blob([$('out').textContent], {type:'application/json'});
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download='site.json'; a.click(); URL.revokeObjectURL(a.href);
+      $('msg').innerHTML='<span class="ok">Yuklandi. Uni uzexperience/content/site.json sifatida saqlang.</span>';
+    });
+    load();
   </script>
-  <p style="font-family:sans-serif;padding:1rem;color:#555">Agar Decap CMS yuklanmasa yoki sozlanmagan bo‘lsa, vaqtinchalik sozlamalar uchun <a href="/admin/settings.html">oddiy admin</a> dan foydalaning.</p>
 </body>
 </html>
