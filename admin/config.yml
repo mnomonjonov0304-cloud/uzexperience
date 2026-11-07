@@ -8,7 +8,7 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-site_url: https://YOUR-DOMAIN.example
+site_url: https://zingy-faun-42fb66.netlify.app
 logo_url: /images/hero-top.jpg
 
 collections:
