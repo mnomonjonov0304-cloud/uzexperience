@@ -1,0 +1,23 @@
+/* UzExperience — Decap CMS UI polish (best-effort, selectors may vary by Decap version) */
+:root {
+  --ux-primary: #0f766e;
+  --ux-primary-2: #115e59;
+  --ux-bg: #f3f6fb;
+  --ux-surface: #ffffff;
+  --ux-border: #dfe7f1;
+  --ux-text: #132033;
+  --ux-muted: #5b6b7f;
+}
+body { background: var(--ux-bg) !important; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif !important; }
+/* Links/buttons accent (broad, low-risk) */
+a { color: var(--ux-primary); }
+button[class*="button"][class*="primary"], [class*="PublishButton"], [class*="SaveButton"] {
+  border-radius: 10px !important;
+}
+/* Cards/surfaces */
+[class*="Card"], [class*="CollectionTop"], [class*="EditorContainer"] {
+  border-radius: 14px;
+}
+/* Scrollbars subtle */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #c8d3e1; border-radius: 999px; }
