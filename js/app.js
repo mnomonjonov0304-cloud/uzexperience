@@ -8,10 +8,12 @@ let BOOKING_FORM_URL = ''; // masalan: 'https://tally.so/r/XXXXXX' yoki Google F
 let TELEGRAM_BOT_URL = ''; // ixtiyoriy: bot/web-app havolasi
 let PAYMENT_LINK = ''; // masalan: Stripe Payment Link / Payme/Click havolasi (real slot/to'lov backend bilan to'liq bo'ladi)
 let REVIEW_ENDPOINT = ''; // ixtiyoriy: sharhlarni qabul qiluvchi backend endpoint (POST JSON)
+let exhibitions = [];
+let exhibYear = 'all';
 
 const i18n = {
   uz: {
-    nav_catalog: 'Katalog', nav_places: 'Mashhur joylar', nav_faq: 'FAQ', nav_how: 'Qanday ishlaydi', nav_contact: 'Aloqa',
+    nav_catalog: 'Katalog', nav_places: 'Mashhur joylar', nav_exhib: "Ko'rgazmalar", nav_faq: 'FAQ', nav_how: 'Qanday ishlaydi', nav_contact: 'Aloqa',
     hero_eyebrow: "O‘zbekiston bo‘ylab mahalliy tajribalar",
     hero_title: 'Sayohatingizni unutilmas qiling',
     hero_subtitle: 'Hududlarni tanlang, mashhur joylar va tajribalarni ko‘ring, sevimlilarga saqlang va qulay bron qiling.',
@@ -25,6 +27,7 @@ const i18n = {
     results: (n) => `${n} ta tajriba topildi`,
     places_title: '12 viloyatning mashhur joylari', places_subtitle: "Har bir hududdan mashhur maskanlar — rasm va lokatsiya bilan.",
     spotlight_in: (r) => `${r} bo‘yicha tajribalar`,
+    exhib_title: "Xalqaro ko'rgazmalar", exhib_subtitle: "O'zbekiston turizmi ishtirok etgan xalqaro ko'rgazma va yarmarkalar (manba: uzbekistan.travel).", exhib_year: 'Yil', exhib_all: 'Barchasi', exhib_open: "Batafsil",
     faq_title: 'Tez savollar (FAQ)', faq_subtitle: "Bron, to‘lov va uchrashuv bo‘yicha umumiy ma'lumot.",
     how_title: 'Qanday ishlaydi', how_1: 'Hudud va tajribani tanlang, rasm va tafsilotlarni ko‘ring.', how_2: 'Bron formasini to‘ldiring va Telegram/WhatsApp orqali yuboring.', how_3: "Tasdiqlash va uchrashuv tafsilotlarini oling (MVP: qo‘lda).",
     contact_title: 'Aloqa va bron', contact_text: "Savol yoki bron uchun qulay usulda bog‘laning (MVP).", contact_btn: 'Telegram', whatsapp: 'WhatsApp', phone: 'Telefon',
@@ -39,7 +42,7 @@ const i18n = {
     book_msg: (d) => `Salom! UzExperience orqali bron so‘rovi:\nTajriba: ${d.title}\nHudud: ${d.place}\nSana: ${d.date || '-'}\nOdamlar: ${d.people || '-'}\nIsm: ${d.name || '-'}\nTelefon: ${d.phone || '-'}`
   },
   ru: {
-    nav_catalog: 'Каталог', nav_places: 'Известные места', nav_faq: 'FAQ', nav_how: 'Как это работает', nav_contact: 'Контакты',
+    nav_catalog: 'Каталог', nav_places: 'Известные места', nav_exhib: 'Выставки', nav_faq: 'FAQ', nav_how: 'Как это работает', nav_contact: 'Контакты',
     hero_eyebrow: 'Местные впечатления по всему Узбекистану',
     hero_title: 'Сделайте поездку незабываемой',
     hero_subtitle: 'Выбирайте регионы, смотрите места и впечатления, сохраняйте в избранное и бронируйте удобно.',
@@ -53,6 +56,7 @@ const i18n = {
     results: (n) => `Найдено впечатлений: ${n}`,
     places_title: 'Известные места 12 областей', places_subtitle: 'Популярные локации по регионам — с фото и картой.',
     spotlight_in: (r) => `Впечатления: ${r}`,
+    exhib_title: 'Международные выставки', exhib_subtitle: 'Международные туристические выставки и ярмарки с участием Узбекистана (источник: uzbekistan.travel).', exhib_year: 'Год', exhib_all: 'Все', exhib_open: 'Подробнее',
     faq_title: 'Частые вопросы (FAQ)', faq_subtitle: 'Общая информация о брони, оплате и встрече.',
     how_title: 'Как это работает', how_1: 'Выберите регион и впечатление, посмотрите фото и детали.', how_2: 'Заполните форму брони и отправьте в Telegram/WhatsApp.', how_3: 'Получите подтверждение и детали встречи (MVP: вручную).',
     contact_title: 'Контакты и бронь', contact_text: 'Свяжитесь удобным способом для вопросов или брони (MVP).', contact_btn: 'Telegram', whatsapp: 'WhatsApp', phone: 'Телефон',
@@ -67,7 +71,7 @@ const i18n = {
     book_msg: (d) => `Здравствуйте! Запрос на бронь через UzExperience:\nВпечатление: ${d.title}\nРегион: ${d.place}\nДата: ${d.date || '-'}\nЧеловек: ${d.people || '-'}\nИмя: ${d.name || '-'}\nТелефон: ${d.phone || '-'}`
   },
   en: {
-    nav_catalog: 'Catalog', nav_places: 'Famous places', nav_faq: 'FAQ', nav_how: 'How it works', nav_contact: 'Contact',
+    nav_catalog: 'Catalog', nav_places: 'Famous places', nav_exhib: 'Exhibitions', nav_faq: 'FAQ', nav_how: 'How it works', nav_contact: 'Contact',
     hero_eyebrow: 'Local experiences across Uzbekistan',
     hero_title: 'Make your trip unforgettable',
     hero_subtitle: 'Explore regions, places, and experiences, save favorites, and book easily.',
@@ -81,6 +85,7 @@ const i18n = {
     results: (n) => `${n} experience(s) found`,
     places_title: 'Famous places of 12 regions', places_subtitle: 'Popular locations across regions — with images and maps.',
     spotlight_in: (r) => `Experiences in ${r}`,
+    exhib_title: 'International exhibitions', exhib_subtitle: 'International tourism exhibitions and fairs with Uzbekistan participation (source: uzbekistan.travel).', exhib_year: 'Year', exhib_all: 'All', exhib_open: 'Details',
     faq_title: 'Frequently Asked Questions', faq_subtitle: 'General info about booking, payment, and meeting.',
     how_title: 'How it works', how_1: 'Choose a region and experience, view images and details.', how_2: 'Fill the booking form and send via Telegram/WhatsApp.', how_3: 'Receive confirmation and meeting details (MVP: manual).',
     contact_title: 'Contact & booking', contact_text: 'Reach us in a convenient way for questions or booking (MVP).', contact_btn: 'Telegram', whatsapp: 'WhatsApp', phone: 'Phone',
@@ -231,6 +236,7 @@ function applyI18n() {
   render();
   renderPlaces();
   renderFaq();
+  renderExhibitions();
   $('#globalTelegram').href = tgUrl('');
   const wa = $('#globalWhatsapp'); if (wa) wa.href = waUrl('');
   const ph = $('#globalPhone'); if (ph) ph.href = `tel:${PHONE_NUMBER}`;
@@ -337,6 +343,31 @@ function renderFaq() {
   const list = $('#faqList'); if (!list) return;
   list.innerHTML = faqs.map((f,i)=>`<div class="faq-item ${i===0?'open':''}"><button class="faq-q" type="button"><span>${escapeHtml(f.q[currentLang])}</span><i class="fa-solid fa-chevron-down"></i></button><p class="faq-a">${escapeHtml(f.a[currentLang])}</p></div>`).join('');
   list.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', ()=> btn.parentElement.classList.toggle('open')));
+}
+
+function exhibYearOf(item) {
+  const m = String(item.date || item.name || '').match(/(20\d{2})/);
+  return m ? m[1] : '';
+}
+function renderExhibitions() {
+  const grid = $('#exhibitionsGrid'); const sel = $('#exhibYearFilter');
+  if (!grid) return;
+  const years = [...new Set(exhibitions.map(exhibYearOf).filter(Boolean))].sort((a,b)=>b.localeCompare(a));
+  if (sel) {
+    const prev = exhibYear;
+    sel.innerHTML = `<option value="all">${escapeHtml(t('exhib_all'))}</option>` + years.map(y=>`<option value="${y}" ${y===prev?'selected':''}>${y}</option>`).join('');
+    exhibYear = sel.value || 'all';
+  }
+  const list = exhibYear === 'all' ? exhibitions : exhibitions.filter(e => exhibYearOf(e) === exhibYear);
+  grid.innerHTML = list.map(e => `
+    <article class="exhib-card">
+      ${e.image ? `<img src="${escapeHtml(e.image)}" alt="${escapeHtml(e.name)}" loading="lazy" onerror="this.style.display='none'">` : `<div class="exhib-img-fallback"><i class="fa-regular fa-image"></i></div>`}
+      <div class="exhib-body">
+        <h4>${escapeHtml(e.name)}</h4>
+        ${e.date ? `<div class="exhib-date"><i class="fa-regular fa-calendar"></i> ${escapeHtml(e.date)}</div>` : ''}
+        <a class="map-link" href="${escapeHtml(e.url)}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${escapeHtml(t('exhib_open'))}</a>
+      </div>
+    </article>`).join('') || `<p class="empty">${escapeHtml(t('empty_state'))}</p>`;
 }
 
 function openDetail(id) {
@@ -456,6 +487,14 @@ async function loadSiteConfig(){
       if (Array.isArray(d.faqs)) faqs = d.faqs;
     }
   } catch {}
+  try {
+    const res = await fetch('content/exhibitions.json', {cache:'no-store'});
+    if (res.ok) {
+      const d = await res.json();
+      if (Array.isArray(d.items)) exhibitions = d.items;
+      else if (Array.isArray(d)) exhibitions = d;
+    }
+  } catch {}
 }
 async function init() {
   await loadSiteConfig();
@@ -471,6 +510,7 @@ async function init() {
   $('#clearFilters')?.addEventListener('click', ()=>{ $('#searchInput').value=''; $('#cityFilter').value='all'; $('#categoryFilter').value='all'; if($('#sortSelect')) $('#sortSelect').value='default'; viewMode='all'; render(); });
   $('#toggleFavorites')?.addEventListener('click', ()=>{ viewMode = viewMode==='favorites'?'all':'favorites'; render(); });
   $('#toggleRecent')?.addEventListener('click', ()=>{ viewMode = viewMode==='recent'?'all':'recent'; render(); });
+  $('#exhibYearFilter')?.addEventListener('change', (e)=>{ exhibYear = e.target.value; renderExhibitions(); });
   $('#modalClose')?.addEventListener('click', closeModal);
   $('#detailModal')?.addEventListener('click', (e) => { if (e.target.dataset.close) closeModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });

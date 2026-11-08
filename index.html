@@ -46,6 +46,7 @@
       <nav class="nav" id="nav">
         <a href="#catalog" data-i18n="nav_catalog">Katalog</a>
         <a href="#places" data-i18n="nav_places">Mashhur joylar</a>
+        <a href="#exhibitions" data-i18n="nav_exhib">Ko‘rgazmalar</a>
         <a href="#faq" data-i18n="nav_faq">FAQ</a>
         <a href="#how" data-i18n="nav_how">Qanday ishlaydi</a>
         <a href="#contact" data-i18n="nav_contact">Aloqa</a>
@@ -140,6 +141,23 @@
           <p data-i18n="places_subtitle">Har bir hududdan mashhur maskanlar — rasm va lokatsiya bilan.</p>
         </div>
         <div id="placesGrid" class="places-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="exhibitions">
+      <div class="container">
+        <div class="section-head exhib-head">
+          <div>
+            <h2 data-i18n="exhib_title">Xalqaro ko‘rgazmalar</h2>
+            <p data-i18n="exhib_subtitle">O‘zbekiston turizmi ishtirok etgan xalqaro ko‘rgazma va yarmarkalar (manba: uzbekistan.travel).</p>
+          </div>
+          <label class="exhib-filter"><span data-i18n="exhib_year">Yil</span>
+            <select id="exhibYearFilter" aria-label="Yil">
+              <option value="all" data-i18n="exhib_all">Barchasi</option>
+            </select>
+          </label>
+        </div>
+        <div id="exhibitionsGrid" class="exhib-grid"></div>
       </div>
     </section>
 
