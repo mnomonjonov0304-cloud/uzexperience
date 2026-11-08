@@ -1,0 +1,445 @@
+{
+  "source": "https://uzbekistan.travel/uz/v/xalqaro-korgazmalar/",
+  "extracted_at": "2026-11-08",
+  "count": 73,
+  "items": [
+    {
+      "name": "Madriddagi “FITUR”",
+      "date": "2024-yil 24-28-yanvar",
+      "url": "https://uzbekistan.travel/uz/vt/fitur-2024-ispaniyada/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/65b/89d/71b/thumb_3042_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Istanbuldagi “EMITT”",
+      "date": "2024-yil 6-9-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/emitt-xalqaro-turizm-va-sayohat-korgazmasi-turkiya-istanbul/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/65b/899/42a/thumb_3041_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Hindistondagi “SATTE”",
+      "date": "2024-yil 22-24-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/hindistonadagi-fitur-2024-korgazmasi/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/65b/89e/0c9/thumb_3044_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Berlindagi “ITB”",
+      "date": "2024-yil 5-7-mart",
+      "url": "https://uzbekistan.travel/uz/vt/itb-berlin-xalqaro-korgazmasi-berlin-germaniya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cd6/5e3/thumb_3717_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Moskvadagi “MITT”",
+      "date": "2024-yil 19-21-mart",
+      "url": "https://uzbekistan.travel/uz/vt/mitt-xalqaro-korgazmasi-moskva-rossiya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cda/56e/thumb_3719_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Siandagi “Xian Silk Road International Tourism Expo”",
+      "date": "2024-yil 29-31-mart",
+      "url": "https://uzbekistan.travel/uz/vt/xitoydagi-xian-silk-road-international-tourism-expo/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cdc/0ea/thumb_3720_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Minskdagi “ОТДЫХ-2024”",
+      "date": "2024-yil 18-20-aprel",
+      "url": "https://uzbekistan.travel/uz/vt/minskdagi-otdyh-2024/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/660/fdb/87b/thumb_3442_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Olmaotadagi “KITF”",
+      "date": "2024-yil 24-26-aprel",
+      "url": "https://uzbekistan.travel/uz/vt/kitf-2024-olmaota/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/65b/771/4ea/thumb_3037_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Seuldagi “SITF”",
+      "date": "2024-yil 9-12-may",
+      "url": "https://uzbekistan.travel/uz/vt/seoul-international-tourism-industry-fair-seul-koreya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cdd/89a/thumb_3723_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Shanxaydagi “ITB China”",
+      "date": "2024-yil 27-29-may",
+      "url": "https://uzbekistan.travel/uz/vt/shangxaydagi-itb/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cdd/eb0/thumb_3725_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Rossiyadagi “Путешествуй!” turizm forumi",
+      "date": "2024-yil 12-16-iyun",
+      "url": "https://uzbekistan.travel/uz/vt/puteshestvuj-rossiya-turizm-forumi/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/664/736/e15/thumb_3479_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Kuala-Lumpurdagi “MATTA Fair”",
+      "date": "2024-yil 6-8-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/matta-fair-xalqaro-sayyohlik-korgazmasi-kuala-lumpur-malayziya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/bd2/169/thumb_3713_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Parijdagi “IFTM Top Resa”",
+      "date": "2024-yil 17-19-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/iftm-top-resa-xalqaro-sayohat-yarmarkasi-parij-fransiya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cde/3c3/thumb_3726_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Moskvadagi “Отдых. Leisure”",
+      "date": "2024-yil 17-19-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/moskvadagi-otdyh-leisure-2024-forumi/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cde/d59/thumb_3727_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Yaponiyadagi “Turizm EXPO Japan”",
+      "date": "2024-yil 26-29-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/tourizm-expo-japan-xalqaro-korgazmasi-yaponiya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/cdf/c4c/thumb_3728_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Pekindagi “COTTM Beijing”",
+      "date": "2024-yil 16-18-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/pekindagi-cottm-2024-korgazmasi/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/ce0/df5/thumb_3730_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Mayamidagi \"WTE Miami\"",
+      "date": "2024-yil 21-23-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/mayamidagi-wte-miami/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/660/d2c/e07/thumb_3435_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Riminidagi “TTG Rimini”",
+      "date": "2024-yil 9-11-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/italiyadagi-ttg-travel-experience-2024-korgazmasi/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/ce0/127/thumb_3729_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Londondagi “WTM London”",
+      "date": "2024-yil 5-7-noyabr",
+      "url": "https://uzbekistan.travel/uz/vt/world-travel-market-buyuk-britaniya-xalqaro-korgazmasi/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/ce2/424/thumb_3732_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Jakartadagi “Halal Indoneziya Expo”",
+      "date": "2024-yil 6-8-dekabr",
+      "url": "https://uzbekistan.travel/uz/vt/halal-expo-indonesia-2024-xalqaro-korgazmasi-jakarta-indoneziya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/668/ce3/0cd/thumb_3733_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Dohadagi “Qatar Travel Mart”",
+      "date": "2024-yil 25-27-noyabr",
+      "url": "https://uzbekistan.travel/uz/vt/dohadagi-qatar-travel-mart/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/671/8a5/8aa/thumb_3956_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Madriddagi “FITUR”",
+      "date": "2025-yil 22-26-yanvar",
+      "url": "https://uzbekistan.travel/uz/vt/fitur-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/673/2fa/197/thumb_4050_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Dehlidagi “SATTE”",
+      "date": "2025-yil 19-21-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/delhidagi-satte/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/676/a82/f33/thumb_4131_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Budapeshtdagi \"UTAZAS HungExpo\"",
+      "date": "2025-yil 20-23-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/budapeshtdagi-utazas-hungexpo/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/676/565/789/thumb_4086_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Daniyadagi \"Danish Travel Show\"",
+      "date": "2025-yil 21-23-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/daniyadagi-danish-travel-show/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/678/7a1/086/thumb_4193_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Berlindagi “ITB”",
+      "date": "2025-yil 4-6-mart",
+      "url": "https://uzbekistan.travel/uz/vt/itb-berlin-2025-germaniya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/676/8f0/186/thumb_4088_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Moskvadagi “MITT”",
+      "date": "2025-yil 18-20-mart",
+      "url": "https://uzbekistan.travel/uz/vt/mitt-2025-moskva-rossiya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/678/5f5/fd5/thumb_4190_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Yekaterinburgdagi “ЛЕТО-2025”",
+      "date": "2025-yil 3-4-aprel",
+      "url": "https://uzbekistan.travel/uz/vt/yekaterinburgdagi-leto-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67d/ab1/213/thumb_4710_740_0_0_0_auto.webp"
+    },
+    {
+      "name": "Minskdagi “ОТДЫХ”",
+      "date": "2025-yil 27-29-mart",
+      "url": "https://uzbekistan.travel/uz/vt/minskdagi-2025-otdyh/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/678/e11/af6/thumb_4230_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Sichuandagi \"SCITE\"",
+      "date": "2025-yil 25-27-aprel",
+      "url": "https://uzbekistan.travel/uz/vt/sichuandagi-scite/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67b/6ae/6dd/thumb_4646_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Dubaydagi “ATM”",
+      "date": "2025-yil 28.04 - 01.05",
+      "url": "https://uzbekistan.travel/uz/vt/arabian-travel-market-atm-baa-dubay-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67b/713/06f/thumb_4661_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Guanchjoudagi \"GITF\"",
+      "date": "2025-yil 15-17-may",
+      "url": "https://uzbekistan.travel/uz/vt/guanchjoudagi-gitf/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67b/6ae/ca2/thumb_4647_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Seuldagi “SITF”",
+      "date": "2025-yil 5-8-iyun",
+      "url": "https://uzbekistan.travel/uz/vt/Seuldagi “SITF” 2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67b/6ae/f4d/thumb_4648_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Olmaotadagi “KITF”",
+      "date": "2025-yil 23-25-aprel",
+      "url": "https://uzbekistan.travel/uz/vt/olmaotadagi-kitf-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67d/ab1/599/thumb_4711_740_0_0_0_auto.webp"
+    },
+    {
+      "name": "Gonkongdagi \"ITE HONGKONG\"",
+      "date": "2025-yil 12-15-iyun",
+      "url": "https://uzbekistan.travel/uz/vt/gonkongdagi-ite-hongkong/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67c/fd1/27c/thumb_4702_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Shenjendagi \"SITE\"",
+      "date": "2025-yil 20-22-iyun",
+      "url": "https://uzbekistan.travel/uz/vt/shenjendagi-site/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/67b/6af/5ea/thumb_4650_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Riminidagi “TTG Rimini”",
+      "date": "2025-yil 8-10-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/italiyadagi-ttg-2025-korgazmasi/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/686/375/75e/thumb_4880_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Kuala-Lumpurdagi “MATTA Fair”",
+      "date": "2025-yil 5-7-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/matta-fair-2025-xalqaro-sayyohlik-korgazmasi-kuala-lumpur-malayziya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/684/c0e/e88/thumb_4854_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Dushanbedagi \"DITE-2025\"",
+      "date": "2025-yil 18-20-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/dushanbedagi-dite-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/68b/a76/c68/thumb_4957_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Parijdagi “IFTM Top Resa”",
+      "date": "2025-yil 23-25-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/iftm-top-resa-2025-xalqaro-sayohat-yarmarkasi-parij-fransiya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/683/e9c/6ec/thumb_4849_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Yaponiyadagi “Turizm EXPO Japan”",
+      "date": "2025-yil 25-28-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/tourizm-expo-japan-xalqaro-korgazmasi-yaponiya-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/685/cd7/970/thumb_4876_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Yekaterinburgdagi \"EXPOTRAVEL-2025\"",
+      "date": "2025-yil 2-3-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/yekaterinburgdagi-expotravel-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/68b/ab1/70a/thumb_4958_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Polshadagi “TT Warsaw”",
+      "date": "2025-yil 10-12-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/polshadagi-tt-warsaw/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/682/2ee/f0b/thumb_4825_740_0_0_0_auto.png"
+    },
+    {
+      "name": "\"WTM London\" Londonda",
+      "date": "",
+      "url": "https://uzbekistan.travel/uz/vt/&quot;WTM London&quot; Londonda-20255/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/689/094/1f7/thumb_4928_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Tangerangdagi \"Halal Indo\"",
+      "date": "2025-yil 31-oktabr 2-noyabr",
+      "url": "https://uzbekistan.travel/uz/vt/tangerangdagi-halal-indo/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/687/639/0f7/thumb_4901_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Dohadagi “Qatar Travel Mart”",
+      "date": "2025-yil 24-26-noyabr",
+      "url": "https://uzbekistan.travel/uz/vt/dohadagi-qatar-travel-mart-2025/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/68a/d37/d32/thumb_4951_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Xaykoudagi \"CITM\"",
+      "date": "2025-yil 19-21-dekabr",
+      "url": "https://uzbekistan.travel/uz/vt/Xaykoudagi &quot;CITM&quot;/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/690/ae3/545/thumb_5017_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Moskva shahridagi “Путешествуй!”",
+      "date": "",
+      "url": "https://uzbekistan.travel/uz/vt/moskva-shahridagi-puteshestvuj/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/6a2/029/838/thumb_5228_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Gonkongdagi “Made in Uzbekistan”",
+      "date": "2026-yil 5-6-may",
+      "url": "https://uzbekistan.travel/uz/vt/gonkongdagi-made-uzbekistan/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/69e/23f/02a/thumb_5201_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Riminidagi “TTG Rimini”",
+      "date": "2026-yil 14-16-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/riminidagi-ttg-rimini/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/69e/0d6/1ed/thumb_5198_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "FITUR — Feria Internacional de Turismo (Madrid, Ispaniya)",
+      "date": "",
+      "url": "https://uzbekistan.travel/uz/vt/fitur-feria-internacional-de-turismo-madrid-ispaniya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/6ae/028/9c7/thumb_5292_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Dushanbe International Tourism Expo / DITE",
+      "date": "22-24-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/dushanbe-international-tourism-expo-dite/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/6a9/a55/20c/thumb_5285_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "IBTM World",
+      "date": "2026 Barselonada",
+      "url": "https://uzbekistan.travel/uz/vt/ibtm-world-2026-barselonada/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/6a6/46a/7c2/thumb_5273_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Olmaotadagi “KITF”",
+      "date": "2026-yil 22-24-aprel",
+      "url": "https://uzbekistan.travel/uz/vt/olmaotadagi-kitf-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/69b/140/aba/thumb_5162_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Madriddagi “FITUR”",
+      "date": "2026-yil 21-25-yanvar",
+      "url": "https://uzbekistan.travel/uz/vt/fitur-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/68f/8a6/18c/thumb_5007_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Avstriyadagi \"Ferien-Messe Wien\"",
+      "date": "2026-yil 15-18-yanvar",
+      "url": "https://uzbekistan.travel/uz/vt/avstriyadagi-ferien-messe-wien/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/68f/716/150/thumb_5004_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Nyu-Yorkdagi “Travel & Adventure Show”",
+      "date": "2026-yil 24-25-yanvar",
+      "url": "https://uzbekistan.travel/uz/vt/nyu-yorkdagi-travel-adventure-show/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/693/808/a6b/thumb_5044_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Shanxaydagi “ITB China”",
+      "date": "2026-yil 26-28-may",
+      "url": "https://uzbekistan.travel/uz/vt/shangxaydagi-itb-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/699/bde/93e/thumb_5138_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Mumbaydagi “OTM”",
+      "date": "2026-yil 5-7-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/mumbaydagi-otm/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/696/761/f9d/thumb_5092_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Istanbuldagi “EMITT”",
+      "date": "2026-yil 5-7-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/emitt-istanbul-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/68f/b48/c43/thumb_5011_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Milandagi “BIT 2026”",
+      "date": "2026-yil 10-12-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/milandagi-bit-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/693/174/744/thumb_5038_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Dehlidagi “SATTE”",
+      "date": "2026-yil 25-27-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/delhidagi-satte-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/693/faa/e2b/thumb_5046_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Daniyadagi \"Danish Travel Show\"",
+      "date": "2026-yil 20-22-fevral",
+      "url": "https://uzbekistan.travel/uz/vt/daniyadagi-danish-travel-show-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/68f/f35/fce/thumb_5012_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Moskvadagi “MITT”",
+      "date": "2026-yil 11-13-mart",
+      "url": "https://uzbekistan.travel/uz/vt/mitt-2026-moskvada/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/693/268/c1b/thumb_5041_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Berlindagi “ITB”",
+      "date": "2026-yil 3-5-mart",
+      "url": "https://uzbekistan.travel/uz/vt/berlindagi-itb-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/692/e80/3b8/thumb_5036_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Barselonadagi “B-Travel”",
+      "date": "2026-yil 20-22-mart",
+      "url": "https://uzbekistan.travel/uz/vt/barselonadagi-b-travel/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/697/861/9a3/thumb_5109_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Kuala-Lumpurdagi “MATTA Fair”",
+      "date": "2026-yil 3-5-aprel",
+      "url": "https://uzbekistan.travel/uz/vt/matta-fair-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/698/ed0/c1b/thumb_5134_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Dubaydagi “ATM”",
+      "date": "2026-yil 4-7-may",
+      "url": "https://uzbekistan.travel/uz/vt/atm-baa-dubay-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/698/d63/aac/thumb_5125_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Seuldagi “SITF”",
+      "date": "2026-yil 4-7-iyun",
+      "url": "https://uzbekistan.travel/uz/vt/Seuldagi “SITF” 2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/699/bd6/d97/thumb_5137_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Parijdagi “IFTM Top Resa”",
+      "date": "2025-yil 15-17-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/iftm-top-resa-2026-yarmarkasi-parij-fransiya/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/69e/0db/35c/thumb_5199_740_0_0_0_auto.png"
+    },
+    {
+      "name": "Yaponiyadagi “Turizm EXPO Japan”",
+      "date": "2026-yil 24-27-sentyabr",
+      "url": "https://uzbekistan.travel/uz/vt/yaponiyadagi-turizm-expo-japan/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/69e/0cf/356/thumb_5195_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "\"WTM London\" Londonda",
+      "date": "2026-yil 3-5-noyabr",
+      "url": "https://uzbekistan.travel/uz/vt/WTM-Londonda-2026/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/69e/0d4/892/thumb_5196_740_0_0_0_auto.jpg"
+    },
+    {
+      "name": "Pekindagi “COITM”",
+      "date": "2026-yil 14-16-oktyabr",
+      "url": "https://uzbekistan.travel/uz/vt/coitm-2026-uz/",
+      "image": "https://uzbekistan.travel/storage/app/uploads/public/69e/0d5/43d/thumb_5197_740_0_0_0_auto.jpg"
+    }
+  ]
+}
