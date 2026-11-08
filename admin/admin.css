@@ -1,23 +1,161 @@
-/* UzExperience — Decap CMS UI polish (best-effort, selectors may vary by Decap version) */
+/* UzExperience Premium Admin — best-effort overrides for Decap CMS UI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 :root {
   --ux-primary: #0f766e;
-  --ux-primary-2: #115e59;
-  --ux-bg: #f3f6fb;
+  --ux-primary-dark: #0b5f59;
+  --ux-accent: #0284c7;
+  --ux-bg: #eef3f9;
   --ux-surface: #ffffff;
-  --ux-border: #dfe7f1;
-  --ux-text: #132033;
-  --ux-muted: #5b6b7f;
+  --ux-surface-2: #f8fafc;
+  --ux-border: #dce6f2;
+  --ux-text: #102033;
+  --ux-muted: #5a6b80;
+  --ux-danger: #dc2626;
+  --ux-shadow: 0 14px 40px rgba(15,23,42,.08);
+  --ux-shadow-sm: 0 6px 18px rgba(15,23,42,.06);
+  --ux-ring: rgba(15,118,110,.18);
+  --ux-radius: 14px;
 }
-body { background: var(--ux-bg) !important; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif !important; }
-/* Links/buttons accent (broad, low-risk) */
-a { color: var(--ux-primary); }
-button[class*="button"][class*="primary"], [class*="PublishButton"], [class*="SaveButton"] {
+html, body {
+  background: radial-gradient(1000px 420px at 8% -8%, rgba(15,118,110,.14), transparent 60%),
+              radial-gradient(800px 360px at 100% 0%, rgba(2,132,199,.10), transparent 55%),
+              var(--ux-bg) !important;
+  color: var(--ux-text) !important;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif !important;
+}
+
+/* Generic surfaces */
+[class*="AppMainContainer"], [class*="main"], main, [id*="nc-root"] { background: transparent !important; }
+[class*="Card"], [class*="card"], [class*="CollectionTopContainer"], [class*="ListCard"],
+[class*="ControlContainer"], [class*="EditorContainer"] > div, [class*="StyledDropdown"] {
+  background: var(--ux-surface) !important;
+  border: 1px solid var(--ux-border) !important;
+  border-radius: var(--ux-radius) !important;
+  box-shadow: var(--ux-shadow-sm) !important;
+}
+
+/* Sidebar / navigation */
+[class*="SidebarContainer"], [class*="SidebarNav"], aside[class*="Sidebar"] {
+  background: rgba(255,255,255,.82) !important;
+  backdrop-filter: blur(10px);
+  border-right: 1px solid var(--ux-border) !important;
+}
+[class*="SidebarHeading"], [class*="SidebarNavLink"], [class*="sidebar"] a, aside a {
   border-radius: 10px !important;
+  font-weight: 600 !important;
+  transition: all .15s ease !important;
 }
-/* Cards/surfaces */
-[class*="Card"], [class*="CollectionTop"], [class*="EditorContainer"] {
-  border-radius: 14px;
+[class*="SidebarNavLink"]:hover, aside a:hover { background: rgba(15,118,110,.08) !important; color: var(--ux-primary) !important; }
+[class*="SidebarNavLink"][aria-current], [class*="active"] { background: rgba(15,118,110,.12) !important; color: var(--ux-primary-dark) !important; }
+
+/* Header */
+[class*="AppHeader"], [class*="header"], header[class*="nc-"] {
+  background: rgba(255,255,255,.78) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--ux-border) !important;
+  box-shadow: 0 4px 18px rgba(15,23,42,.04) !important;
 }
-/* Scrollbars subtle */
+
+/* Buttons - premium feel */
+button, [role="button"], [class*="button"], [class*="Button"] {
+  font-family: inherit !important;
+  font-weight: 700 !important;
+  border-radius: 12px !important;
+  transition: transform .12s ease, box-shadow .15s ease, filter .15s ease, background .15s ease !important;
+  letter-spacing: .01em;
+}
+button:hover, [class*="button"]:hover, [class*="Button"]:hover { transform: translateY(-1px); }
+button:active, [class*="button"]:active { transform: translateY(0); }
+
+/* Primary actions (Save, Publish, Login-ish) */
+button[class*="Publish"], button[class*="publish"], [class*="PublishButton"],
+button[class*="Save"], [class*="SaveButton"], button[class*="primary"], [class*="button-primary"],
+[class*="Button-primary"], [class*="successButton"] {
+  background: linear-gradient(135deg, var(--ux-primary), var(--ux-primary-dark)) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 10px 22px rgba(15,118,110,.22) !important;
+}
+button[class*="Publish"]:hover, button[class*="Save"]:hover, button[class*="primary"]:hover {
+  filter: saturate(1.04) brightness(1.02) !important;
+  box-shadow: 0 14px 28px rgba(15,118,110,.26) !important;
+}
+
+/* Secondary / default buttons */
+button:not([class*="Publish"]):not([class*="Save"]):not([class*="Delete"]):not([class*="delete"]):not([class*="primary"]),
+[class*="Button-default"], [class*="defaultButton"] {
+  background: #fff !important;
+  color: var(--ux-text) !important;
+  border: 1px solid var(--ux-border) !important;
+  box-shadow: 0 2px 8px rgba(15,23,42,.03) !important;
+}
+button:not([class*="Publish"]):not([class*="Save"]):not([class*="Delete"]):not([class*="primary"]):hover {
+  border-color: #c7d6e8 !important;
+  box-shadow: var(--ux-shadow-sm) !important;
+}
+
+/* Delete / danger */
+button[class*="Delete"], button[class*="delete"], [class*="DeleteButton"], [class*="danger"] {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: #fff !important;
+  border: 0 !important;
+  box-shadow: 0 8px 18px rgba(220,38,38,.18) !important;
+}
+
+/* Collection list / entries */
+[class*="CollectionTopRow"], [class*="collectionTop"] h1, [class*="CollectionTop"] h1 {
+  color: var(--ux-text) !important; font-weight: 800 !important; letter-spacing: -.02em;
+}
+[class*="ListCardLink"], [class*="CardsGrid"] a, [class*="entryListing"] a, [class*="GridCard"] {
+  border-radius: 14px !important;
+  border: 1px solid var(--ux-border) !important;
+  background: #fff !important;
+  box-shadow: 0 2px 10px rgba(15,23,42,.03) !important;
+  transition: all .15s ease !important;
+}
+[class*="ListCardLink"]:hover, [class*="CardsGrid"] a:hover, [class*="GridCard"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15,23,42,.08) !important;
+  border-color: #cfe0d9 !important;
+}
+
+/* Inputs */
+input, textarea, select, [class*="TextControl"], [class*="input"] {
+  font-family: inherit !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--ux-border) !important;
+  background: #fff !important;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: #8fd3cd !important;
+  box-shadow: 0 0 0 4px var(--ux-ring) !important;
+}
+label, [class*="Label"], [class*="FieldLabel"] { font-weight: 700 !important; color: var(--ux-text) !important; }
+
+/* Modals / dropdowns */
+[class*="Modal"], [class*="modal"], [class*="DropdownList"], [role="dialog"] {
+  border-radius: 16px !important;
+  border: 1px solid var(--ux-border) !important;
+  box-shadow: var(--ux-shadow) !important;
+}
+
+/* Workflow/status accents */
+[class*="status"], [class*="badge"] { border-radius: 999px !important; font-weight: 700 !important; }
+
+/* Login / auth area (Netlify Identity button container if visible) */
+.netlify-identity-button, [data-netlify-identity-button] {
+  background: linear-gradient(135deg, var(--ux-primary), var(--ux-primary-dark)) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  padding: .7rem 1rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 22px rgba(15,118,110,.22) !important;
+}
+
+/* Scrollbars */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-thumb { background: #c8d3e1; border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c3d1e2; border-radius: 999px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-thumb:hover { background: #aebfd3; }

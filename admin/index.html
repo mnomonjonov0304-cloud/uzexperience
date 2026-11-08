@@ -15,65 +15,100 @@
   <meta name="robots" content="noindex,nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
-    :root{--bg:#f3f6fb;--surface:#fff;--text:#132033;--muted:#5b6b7f;--border:#dfe7f1;--primary:#0f766e;--shadow:0 18px 50px rgba(15,23,42,.10)}
-    *{box-sizing:border-box} body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif; background: radial-gradient(1100px 420px at 10% -10%, rgba(15,118,110,.16), transparent 60%), var(--bg); color:var(--text); }
-    .boot { max-width:760px; margin:8vh auto; padding:0 1rem; }
-    .card { background:rgba(255,255,255,.95); border:1px solid var(--border); border-radius:20px; padding:1.2rem 1.25rem; box-shadow:var(--shadow); }
-    .brand { display:flex; align-items:center; gap:.75rem; margin-bottom:.35rem; }
-    .logo { width:46px; height:46px; border-radius:14px; object-fit:cover; border:1px solid var(--border); background:#fff; }
-    h1 { margin:0; font-size:1.35rem; }
-    .sub { margin:.1rem 0 .85rem; color:var(--muted); line-height:1.55; }
-    .links { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.25rem; }
-    .links a { text-decoration:none; border:1px solid var(--border); padding:.55rem .8rem; border-radius:12px; background:#fff; color:var(--text); font-weight:600; }
-    .links a.primary { background:linear-gradient(135deg,var(--primary),#115e59); color:#fff; border-color:transparent; }
-    .hint { margin-top:.85rem; font-size:.88rem; color:var(--muted); background:#f8fafc; border:1px dashed #d7e1ec; border-radius:12px; padding:.65rem .75rem; }
+    :root{--bg:#eef3f9;--surface:rgba(255,255,255,.88);--solid:#fff;--text:#102033;--muted:#5a6b80;--border:rgba(210,222,237,.9);--primary:#0f766e;--primary2:#0b5f59;--accent:#0284c7;--shadow:0 24px 70px rgba(15,23,42,.12)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);min-height:100vh;background:
+      radial-gradient(1000px 460px at 10% -10%, rgba(15,118,110,.20), transparent 60%),
+      radial-gradient(820px 380px at 100% 0%, rgba(2,132,199,.14), transparent 55%),
+      linear-gradient(180deg,#eef3f9,#f7fafd)}
+    .boot{max-width:860px;margin:6vh auto;padding:0 1rem}
+    .shell{display:grid;grid-template-columns:1.15fr .85fr;gap:1rem;align-items:stretch}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:1.25rem 1.3rem;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
+    .brand{display:flex;align-items:center;gap:.8rem;margin-bottom:.5rem}
+    .logo{width:52px;height:52px;border-radius:16px;object-fit:cover;border:1px solid var(--border);box-shadow:0 10px 24px rgba(15,23,42,.10);background:#fff}
+    h1{margin:0;font-size:1.45rem;letter-spacing:-.02em}
+    .sub{margin:.35rem 0 1rem;color:var(--muted);line-height:1.6}
+    .actions{display:flex;gap:.55rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;border:1px solid var(--border);padding:.72rem 1rem;border-radius:14px;background:rgba(255,255,255,.92);color:var(--text);font-weight:800;transition:.15s;cursor:pointer;font:inherit}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(15,23,42,.08)}
+    .btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;border-color:transparent;box-shadow:0 12px 26px rgba(15,118,110,.24)}
+    .btn.accent{background:linear-gradient(135deg,#0284c7,#0369a1);color:#fff;border-color:transparent;box-shadow:0 12px 26px rgba(2,132,199,.20)}
+    .features{display:grid;gap:.6rem}
+    .feat{background:rgba(255,255,255,.72);border:1px solid var(--border);border-radius:18px;padding:.85rem .9rem;display:flex;gap:.7rem;align-items:flex-start}
+    .feat .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(15,118,110,.10);color:var(--primary);flex:0 0 auto}
+    .feat b{display:block;margin-bottom:.1rem}.feat span{color:var(--muted);font-size:.9rem;line-height:1.45}
+    .hint{margin-top:1rem;font-size:.88rem;color:var(--muted);background:rgba(248,250,252,.9);border:1px dashed #d3dfec;border-radius:14px;padding:.7rem .8rem;line-height:1.5}
+    .pill{display:inline-flex;align-items:center;gap:.35rem;background:rgba(15,118,110,.10);color:#0b5f59;border:1px solid rgba(15,118,110,.16);padding:.26rem .6rem;border-radius:999px;font-size:.78rem;font-weight:800;margin-bottom:.25rem}
+    @media (max-width:860px){.shell{grid-template-columns:1fr}.boot{margin:3vh auto}}
   </style>
   <link rel="stylesheet" href="/admin/admin.css" />
 </head>
 <body>
   <div class="boot" id="boot">
-    <div class="card">
-      <div class="brand">
-        <img class="logo" src="/images/hero-top.jpg" alt="UzExperience" />
-        <div>
-          <h1>UzExperience Admin</h1>
-          <div style="color:var(--muted);font-size:.92rem">Kontent va sozlamalarni boshqarish</div>
+    <div class="shell">
+      <div class="card">
+        <div class="brand">
+          <img class="logo" src="/images/hero-top.jpg" alt="UzExperience" />
+          <div>
+            <div class="pill"><i class="fa-solid fa-shield-halved"></i> UzExperience Admin</div>
+            <h1>Kontent boshqaruv paneli</h1>
+          </div>
         </div>
+        <p class="sub">CMS yuklanmoqda. Davom etish uchun <strong>Netlify Identity</strong> orqali kiring. Kirgach <strong>Sozlamalar</strong> va <strong>Kontent</strong> bo‘limlarida tajribalar, joylar, FAQ hamda aloqa ma’lumotlarini boshqarasiz.</p>
+        <div class="actions">
+          <button class="btn primary" type="button" id="btnLogin"><i class="fa-solid fa-right-to-bracket"></i> Kirish</button>
+          <a class="btn accent" href="/admin/settings.html"><i class="fa-solid fa-sliders"></i> Sozlamalar (tez)</a>
+          <a class="btn" href="/panel/"><i class="fa-solid fa-bolt"></i> /panel</a>
+          <a class="btn" href="/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Sayt</a>
+        </div>
+        <div class="hint"><i class="fa-solid fa-circle-info" style="color:var(--primary)"></i> Saqlangan o‘zgarishlar GitHub’ga commit bo‘ladi va Netlify saytni avtomatik yangilaydi. Xato bo‘lsa: <strong>Cmd+Shift+R</strong> qilib yangilang.</div>
       </div>
-      <p class="sub">CMS yuklanmoqda. Kirish uchun Netlify Identity login oynasi ochiladi. Agar muammo bo‘lsa, fallback sozlamalar sahifasidan foydalaning.</p>
-      <div class="links">
-        <a class="primary" href="/admin/">CMS’ni yangilash</a>
-        <a href="/admin/settings.html">Oddiy sozlamalar</a>
-        <a href="/panel/">Qisqa panel</a>
-        <a href="/" target="_blank" rel="noopener">Sayt</a>
+      <div class="features">
+        <div class="feat"><div class="ic"><i class="fa-solid fa-layer-group"></i></div><div><b>Kontent</b><span>Tajribalar, mashhur joylar va FAQ — UZ/RU/EN.</span></div></div>
+        <div class="feat"><div class="ic"><i class="fa-solid fa-link"></i></div><div><b>Sozlamalar</b><span>Telegram, WhatsApp, telefon, bron/to‘lov/sharh havolalari.</span></div></div>
+        <div class="feat"><div class="ic"><i class="fa-solid fa-lock"></i></div><div><b>Xavfsiz kirish</b><span>Faqat Netlify Identity orqali ruxsat berilgan adminlar.</span></div></div>
+        <div class="feat"><div class="ic"><i class="fa-solid fa-wand-magic-sparkles"></i></div><div><b>Premium boshqaruv</b><span>Yangi ko‘rinish, qulay tugmalar va tezkor havolalar.</span></div></div>
       </div>
-      <div class="hint"><strong>Maslahat:</strong> Xato ko‘rsatilsa, sahifani yangilang (Cmd+Shift+R) va qayta login qiling. O‘zgarishlar saqlangach Netlify avtomatik deploy qiladi.</div>
     </div>
   </div>
+
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
+    function openIdentity() {
+      if (window.netlifyIdentity) window.netlifyIdentity.open();
+    }
+    document.getElementById('btnLogin').addEventListener('click', openIdentity);
+
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function(user) {
-        if (!user) window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
+        if (!user) {
+          window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
+        }
       });
     }
-    // Best-effort global UI polish after CMS mounts
-    function applyCmsPolish(){
-      var b=document.getElementById('boot'); if(b) b.style.display='none';
+
+    function injectBranding() {
+      var b=document.getElementById('boot');
+      if (b && window.CMS) b.style.display='none';
       try {
-        var style=document.createElement('style');
-        style.textContent='body{font-family:Inter,system-ui,sans-serif !important;}';
-        document.head.appendChild(style);
+        var s=document.createElement('style');
+        s.setAttribute('data-ux','1');
+        s.textContent="body{font-family:Inter,system-ui,sans-serif !important} [class*='AppHeader']{background:rgba(255,255,255,.82)!important;backdrop-filter:blur(12px)!important}";
+        document.head.appendChild(s);
       } catch(e){}
     }
+
     var tries=0;
     var t=setInterval(function(){
       tries++;
-      if (window.CMS && document.querySelector('[class*="App"], [id*="nc-root"], main')) { clearInterval(t); applyCmsPolish(); }
-      if (tries>40) { clearInterval(t); var b=document.getElementById('boot'); if(b && window.CMS) b.style.display='none'; }
+      if (window.CMS && (document.querySelector('[class*="nc-app"]') || document.querySelector('[id*="nc-root"]') || document.querySelector('main'))) {
+        clearInterval(t); injectBranding();
+      }
+      if (tries>60) { clearInterval(t); if (window.CMS) injectBranding(); }
     }, 250);
   </script>
 </body>
